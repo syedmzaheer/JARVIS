@@ -71,51 +71,49 @@ def AnswerModifier(Answer):
 # Main chatbot function to handle user queries.
 def ChatBot(Query):
     """ This function sends the user's query to the chatbot and returns the AI's response."""
-
     try:
-        # Load the existing chat log from the JSON file.
+        # Load the existing chat log
         with open(r"Data\ChatLog.json", "r") as f:
             messages = load(f)
 
-        # Append the user's query to the messages list.
+        # Append the user's query
         messages.append({"role": "user", "content": f"{Query}"})
 
-        # Make a request to the Groq API for a response.
+        # Make the request
         completion = client.chat.completions.create(
-            model="llama3-70b-8192",  # Specify the AI model to use.
+            model="llama3-70b-8192",
             messages=SystemChatBot + [{"role": "system", "content": RealtimeInformation()}] + messages,
-            max_tokens=1024,  # Limit the maximum tokens in the response.
-            temperature=0.7,  # Adjust response randomness (higher means more random).
-            top_p=1,  # Use nucleus sampling to control diversity.
-            stream=True,  # Enable streaming response.
-            stop=None  # Allow the model to determine when to stop.
+            max_tokens=1024,
+            temperature=0.7,
+            top_p=1,
+            stream=True,
+            stop=None
         )
 
-        Answer = ""  # Initialize an empty string to store the AI's response.
+        Answer = ""  # Start collecting full answer
         
-        # Process the streamed response chunks.
+        # Collect the full response from stream
         for chunk in completion:
-            if chunk.choices[0].delta.content:  # Check if there's content in the current chunk.
-                Answer += chunk.choices[0].delta.content  # Append the content to the answer.
+            delta = chunk.choices[0].delta.content
+            if delta:
+                Answer += delta
 
-            Answer = Answer.replace("</s>", "")  # Modify the answer for better formatting.
-            Answer = AnswerModifier(Answer)
-            # Append the chatbot's response to the messages list.
-            messages.append({"role": "assistant", "content": Answer})
+        # Clean and modify after collecting full response
+        Answer = Answer.replace("</s>", "")
+        Answer = AnswerModifier(Answer)
 
-            # Save the updated chat log to the JSON file.
-            with open(r"Data\ChatLog.json", "w") as f:
-                dump(messages, f, indent=4)
+        # Save assistant's response
+        messages.append({"role": "assistant", "content": Answer})
+        with open(r"Data\ChatLog.json", "w") as f:
+            dump(messages, f, indent=4)
 
-            # Return the formatted response.
-            return Answer
+        return Answer
 
     except Exception as e:
-    # Handle errors by printing the exception and resetting the chat log.
         print(f"Error: {e}")
         with open(r"Data\ChatLog.json", "w") as f:
             dump([], f, indent=4)
-        return ChatBot(Query)  # Retry the query after resetting the log.
+        return ChatBot(Query)
 
 # Main program entry point.
 if __name__ == "__main__":
