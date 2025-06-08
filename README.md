@@ -21,6 +21,7 @@ Sure! Here's the content formatted as a README.md file for you:
 ---
 
 ## Project Structure
+'''
 
 JARVIS/
 │
@@ -53,6 +54,7 @@ JARVIS/
 │ ├── ChatLog.json # Conversation history
 │
 └── venv/ # Python virtual environment (excluded from VCS)
+'''
 
 ---
 
