@@ -98,16 +98,3 @@ Contributions are welcome! Feel free to:
 •	Fork the repo and submit pull requests
 •	Improve documentation or add tests
 Please follow PEP8 style guidelines and write clear commit messages.
-________________________________________
-License
-This project is licensed under the MIT License. See the LICENSE file for details.
-________________________________________
-Contact
-For questions or support, contact:
-•	Your Name (or GitHub username)
-•	Email: your.email@example.com
-•	GitHub: https://github.com/yourusername
-________________________________________
-
-You can save this as `README.md` in your project root. Let me know if you want me to generate any other files!
-
