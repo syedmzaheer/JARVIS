@@ -22,7 +22,8 @@ Sure! Here's the content formatted as a README.md file for you:
 
 ## Project Structure
 
-'''JARVIS/
+'''
+> JARVIS/
 │
 ├── .env                           # API keys and environment configs
 ├── requirements.txt               # Python dependencies
