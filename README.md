@@ -21,39 +21,38 @@ Sure! Here's the content formatted as a README.md file for you:
 ---
 
 ## Project Structure
-'''
 
-JARVIS/
+'''JARVIS/
 │
-├── .env # API keys and environment configs
-├── requirements.txt # Python dependencies
+├── .env                           # API keys and environment configs
+├── requirements.txt               # Python dependencies
 ├── README.md # This file
 │
-├── main.py # Main entry point to launch assistant (CLI/GUI)
+├── main.py                        # Main entry point to launch assistant (CLI/GUI)
 │
-├── Backend/ # Core AI and utility modules
-│ ├── Automation.py # Task automation scripts
-│ ├── ChatBot.py # Chat interaction engine with Groq API
-│ ├── ImageGeneration.py # AI image generation logic
-│ ├── Model.py # ML models and data processing
-│ ├── RealtimeSearchEngine.py # Real-time information retrieval
-│ ├── SpeechToText.py # Converts speech input to text
-│ ├── TextToSpeech.py # Converts text responses to speech
+├── Backend/                       # Core AI and utility modules
+│ ├── Automation.py                # Task automation scripts
+│ ├── ChatBot.py                   # Chat interaction engine with Groq API
+│ ├── ImageGeneration.py           # AI image generation logic
+│ ├── Model.py                     # ML models and data processing
+│ ├── RealtimeSearchEngine.py      # Real-time information retrieval
+│ ├── SpeechToText.py              # Converts speech input to text
+│ ├── TextToSpeech.py              # Converts text responses to speech
 │
-├── Frontend/ # User interface components and resources
-│ ├── GUI.py # Main GUI app file
-│ ├── Files/ # Data files for frontend state and info
+├── Frontend/                      # User interface components and resources
+│ ├── GUI.py                       # Main GUI app file
+│ ├── Files/                       # Data files for frontend state and info
 │ │ ├── Database.data
 │ │ ├── ImageGeneration.data
 │ │ ├── Mic.data
 │ │ ├── Responses.data
 │ │ ├── Status.data
-│ ├── Graphics/ # Generated images, charts, and other visuals
+│ ├── Graphics/                     # Generated images, charts, and other visuals
 │
-├── Data/ # Persistent backend data storage
-│ ├── ChatLog.json # Conversation history
+├── Data/                           # Persistent backend data storage
+│ ├── ChatLog.json                  # Conversation history
 │
-└── venv/ # Python virtual environment (excluded from VCS)
+└── venv/                           # Python virtual environment (excluded from VCS)
 '''
 
 ---
