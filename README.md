@@ -39,21 +39,21 @@ JARVIS/
 │ ├── RealtimeSearchEngine.py      # Real-time information retrieval    
 │ ├── SpeechToText.py              # Converts speech input to text    
 │ ├── TextToSpeech.py              # Converts text responses to speech    
-│
-├── Frontend/                      # User interface components and resources
-│ ├── GUI.py                       # Main GUI app file
-│ ├── Files/                       # Data files for frontend state and info
-│ │ ├── Database.data
-│ │ ├── ImageGeneration.data
-│ │ ├── Mic.data
-│ │ ├── Responses.data
-│ │ ├── Status.data
-│ ├── Graphics/                     # Generated images, charts, and other visuals
-│
-├── Data/                           # Persistent backend data storage
-│ ├── ChatLog.json                  # Conversation history
-│
-└── venv/                           # Python virtual environment (excluded from VCS)
+│      
+├── Frontend/                      # User interface components and resources      
+│ ├── GUI.py                       # Main GUI app file      
+│ ├── Files/                       # Data files for frontend state and info    
+│ │ ├── Database.data     
+│ │ ├── ImageGeneration.data    
+│ │ ├── Mic.data    
+│ │ ├── Responses.data    
+│ │ ├── Status.data     
+│ ├── Graphics/                     # Generated images, charts, and other visuals     
+│       
+├── Data/                           # Persistent backend data storage     
+│ ├── ChatLog.json                  # Conversation history     
+│        
+└── venv/                           # Python virtual environment (excluded from VCS)    
 '''
 
 ---
