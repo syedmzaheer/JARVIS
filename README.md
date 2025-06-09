@@ -25,9 +25,9 @@ Sure! Here's the content formatted as a README.md file for you:
 '''
 JARVIS/
 │
-├── .env                           # API keys and environment configs
-├── requirements.txt               # Python dependencies
-├── README.md # This file
+├── .env                           # API keys and environment configs.    
+├── requirements.txt               # Python dependencies.     
+├── README.md                      # This file.  
 │
 ├── main.py                        # Main entry point to launch assistant (CLI/GUI)
 │
