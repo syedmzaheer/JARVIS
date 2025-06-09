@@ -28,17 +28,17 @@ JARVIS/
 ├── .env                           # API keys and environment configs.    
 ├── requirements.txt               # Python dependencies.     
 ├── README.md                      # This file.  
-│
-├── main.py                        # Main entry point to launch assistant (CLI/GUI)
-│
-├── Backend/                       # Core AI and utility modules
-│ ├── Automation.py                # Task automation scripts
-│ ├── ChatBot.py                   # Chat interaction engine with Groq API
-│ ├── ImageGeneration.py           # AI image generation logic
-│ ├── Model.py                     # ML models and data processing
-│ ├── RealtimeSearchEngine.py      # Real-time information retrieval
-│ ├── SpeechToText.py              # Converts speech input to text
-│ ├── TextToSpeech.py              # Converts text responses to speech
+│    
+├── main.py                        # Main entry point to launch assistant (CLI/GUI)  
+│    
+├── Backend/                       # Core AI and utility modules  
+│ ├── Automation.py                # Task automation scripts     
+│ ├── ChatBot.py                   # Chat interaction engine with Groq API     
+│ ├── ImageGeneration.py           # AI image generation logic    
+│ ├── Model.py                     # ML models and data processing    
+│ ├── RealtimeSearchEngine.py      # Real-time information retrieval    
+│ ├── SpeechToText.py              # Converts speech input to text    
+│ ├── TextToSpeech.py              # Converts text responses to speech    
 │
 ├── Frontend/                      # User interface components and resources
 │ ├── GUI.py                       # Main GUI app file
